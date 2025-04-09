@@ -7,7 +7,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import Land from '../abis/LandRegistry.json'
 import ipfs from '../ipfs'
-import axios from 'axios'
+// import axios from 'axios'
 
 class Register extends Component {
   constructor(props) {

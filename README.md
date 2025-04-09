@@ -63,8 +63,8 @@ To set up the project, go along with the following steps:-
 - Open another terminal and execute the following command to add the government registrar detail to the database. <br/>
 `$ curl -X POST http://localhost:3001/register_govt`
 - Credentials for government login:- <br/>
-Username:- Delhi Government <br/>
-Password:- Delhi
+Username:- Land registar <br/>
+Password:- <password>
 - You're all done. Enjoy!
 
 ## Workflow
@@ -95,5 +95,25 @@ Once the request is approved, the buyer can now buy the property. If approved, t
 
 The whole process is conducted in the form of the smart contract, which ensures that the process is immutable, secured and digitized. No one in between can tamper the data, and authenticity is maintained throughout the process. There is no human error involved. Paperwork will be reduced, and most importantly, everything will become transparent. Chances of fraud cases will get reduced. The public ledger can be used in case there is any doubt regarding the land ownership claim. The documents are digitally signed, which leads to the transfer of land title upon payment in cryptocurrency.
 
+View your API key
+Your API key is your passport to the Ethereum Mainnet network. Always append your API key to your request URL to authenticate your request with MetaMask Developer.
+## API key
+##
+851e6df7f444401588339f3c02eb736f
 
-**In case of any query, please feel free to contact me.**
+
+## HTTPS
+
+## https://mainnet.infura.io/v3/851e6df7f444401588339f3c02eb736f
+
+## Send your first request
+To send your first request, click “Send request” below. You have configured your API key to require API key secret, JWTs, or allowlists please disable these in your settings before sending your first request.
+
+curl --url https://mainnet.infura.io/v3/851e6df7f444401588339f3c02eb736f \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+
+## Write down your Secret Recovery Phrase for metamask
+![alt text](image.png)
+mix slender eager coast also lake aspect hidden replace disorder dumb excess

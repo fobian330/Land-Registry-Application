@@ -23,39 +23,44 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isAuthenticated: false,
+      isAuthenticated: true,
     }
   }
   async componentWillMount() {
+    // This method initializes the blockchain environment
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
   componentDidMount() {
+    // This method checks the authentication state from localStorage
     if (!window.localStorage.getItem('authenticated'))
-      this.setState({ isAuthenticated: false })
-    const isAuthenticated =
-      window.localStorage.getItem('authenticated') === 'true'
-    this.setState({ isAuthenticated })
+       this.setState({ isAuthenticated: false })
+     const isAuthenticated =
+       window.localStorage.getItem('authenticated') === 'true'
+     this.setState({ isAuthenticated })
   }
   async loadBlockchainData() {
-    const web3 = window.web3
+    // TODO: Remove this later if blockchain browser is not required
+    // This method retrieves the user's Ethereum accounts
+     const web3 = window.web3
 
-    const accounts = await web3.eth.getAccounts()
-    // this.setState({ account: accounts[0] })
-    window.localStorage.setItem('web3account', accounts[0])
+     const accounts = await web3.eth.getAccounts()
+     window.localStorage.setItem('web3account', accounts[0])
   }
 
   async loadWeb3() {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum)
-      await window.ethereum.enable()
-    } else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider)
-    } else {
-      window.alert(
-        'Non-Ethereum browser detected. You should consider trying MetaMask!',
-      )
-    }
+    // TODO: Remove this later if blockchain browser is not required
+    // This method sets up Web3 for blockchain interaction
+     if (window.ethereum) {
+       window.web3 = new Web3(window.ethereum)
+       await window.ethereum.enable()
+     } else if (window.web3) {
+       window.web3 = new Web3(window.web3.currentProvider)
+     } else {
+       window.alert(
+         'Non-Ethereum browser detected. You should consider trying MetaMask!',
+       )
+     }
   }
   render() {
     return (
