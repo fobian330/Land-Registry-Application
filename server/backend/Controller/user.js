@@ -35,7 +35,7 @@ router.post('/signup', async (req, res) => {
   }
 })
 
-router.post('/register_govt', async (req, res) => {
+router.post('/register_govt', async (_req, res) => {
   // Insert details straight into MongoDB
     try {
       

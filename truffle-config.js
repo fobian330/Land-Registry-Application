@@ -81,15 +81,15 @@ module.exports = {
     
     // Useful for deploying to a public network.
     // Note: It's important to wrap the provider as a function to ensure truffle uses a new provider every time.
-     sepolia: {
-       provider: () => new HDWalletProvider(MNEMONIC, `https://sepolia.infura.io/v3/${PROJECT_ID}`),
-       network_id: 11155111, // Sepolia's network ID
-       confirmations: 2,    // # of confirmations to wait between deployments
-       timeoutBlocks: 200,  // # of blocks before a deployment times out
-       skipDryRun: true,     // Skip dry run before migrations
-       gas: 4465030, // Gas limit (you may need to adjust this based on your contract)
-       gasPrice: 10000000000, // Gas price in wei (optional, you can adjust this if needed)
-     },
+    // sepolia: {
+      // provider: () => new HDWalletProvider(MNEMONIC, `https://sepolia.infura.io/v3/${PROJECT_ID}`),
+      // network_id: 11155111, // Sepolia's network ID
+      // confirmations: 2,    // # of confirmations to wait between deployments
+      // timeoutBlocks: 200,  // # of blocks before a deployment times out
+      // skipDryRun: true,     // Skip dry run before migrations
+      // gas: 4465030, // Gas limit (you may need to adjust this based on your contract)
+      // gasPrice: 10000000000, // Gas price in wei (optional, you can adjust this if needed)
+    // },
     //
     // Useful for private networks
     private: {
